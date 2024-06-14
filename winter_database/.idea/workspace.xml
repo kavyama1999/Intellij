@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9e945577-7ee5-4109-9883-0e1d8ae00db4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/beans/FormValidationBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/configuration/FormValidationPrimaryConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/JobApplicationForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/Result.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/.idea/sathwik.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/DBConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterWebInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/EventFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/EventDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/dto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/EventRegistrationForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/EventResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2hpMXFIoGZw581Z5nTZ31Hqhw9j" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: winter_database.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Tomcat: winter_database" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/winter_database" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="port" value="8082" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.38" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-9.0.38-windows-x64/apache-tomcat-9.0.38" />
+          <option name="version" value="9.0.38.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="winter_database" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e945577-7ee5-4109-9883-0e1d8ae00db4" name="Changes" comment="" />
+      <created>1718286602729</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718286602729</updated>
+    </task>
+    <servers />
+  </component>
+</project>
