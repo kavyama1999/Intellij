@@ -26,7 +26,10 @@
             <!-- End of logo -->
 
 
-        <a class="navbar-brand  text-white" href="SignInForm.jsp"><b>SignInForm</b></a>
+        <a class="navbar-brand  text-white" href="SignUpForm.jsp"><b>SignUpForm</b></a>
+
+                <a class="navbar-brand  text-white" href="LoginPage.jsp"><b>LoginPage</b></a>
+
 
 
 

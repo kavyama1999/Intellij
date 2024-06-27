@@ -1,0 +1,9 @@
+<div class="row mb-3">
+                        <span id="collegeerror"></span>
+                        <label for="college" class="form-label"><b>College Name:</b></label>
+                        <select class="form-select custom-select-width" id="college" onblur="collegeValidation()" name="college" aria-label="Select College">
+                            <option value="" ${scholarshipDTO.college == null ? 'selected' : ''}>Select</option>
+                            <option value="Bengaluru City University" ${scholarshipDTO.college eq 'Bengaluru City University' ? 'selected' : ''}>Bengaluru City University</option>
+                            <option value="Presidency College" ${scholarshipDTO.college eq 'Presidency College' ? 'selected' : ''}>Presidency College</option>
+                            <option value="Dayananda Sagar College of Engineering" ${scholarshipDTO.college eq 'Dayananda Sagar College of Engineering' ? 'selected' : ''}>Dayananda Sagar College of Engineering</option>
+                        </select>

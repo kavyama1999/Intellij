@@ -1,15 +1,14 @@
 package com.xworkz.issuesmanagement.dto;
 
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "sign_in")
-public class SignInDTO {
+@Table(name = "sign_up")
+public class SignUpDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +22,7 @@ public class SignInDTO {
     private String firstName;
 
     @NotEmpty(message = "LastName cannot be empty")
-    @Size(min = 1, max = 3, message = "LastName should be >1 and <4 letters")
+    @Size(min = 1, max = 30, message = "LastName should be >1 and <4 letters")
     @Pattern(regexp = "^[a-zA-Z ]+$", message = "Last Name should contain only alphabetic letters")
     @Column(name = "last_name")
     private String lastName;
@@ -72,7 +71,26 @@ public class SignInDTO {
 
 
 
-    public SignInDTO() {
+
+
+
+   // @NotEmpty(message = "Password cannot be empty")
+   // @Size(min = 8, max = 20, message = "Password should be between 8 and 20 characters")
+    @Column(name = "password")
+    private String password;
+
+
+    //for Account locking
+
+    @Column(name = "failed_attempt")
+    private int failedAttempt;
+
+    @Column(name = "account_locked")
+    private  boolean accountLocked;
+
+
+
+    public SignUpDTO() {
         System.out.println("No parameters in SignInDTO..");
     }
 
@@ -182,22 +200,36 @@ public class SignInDTO {
     }
 
 
-    @Override
-    public String toString() {
-        return "SignInDTO{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", contactNumber=" + contactNumber +
-                ", alternateContactNumber=" + alternateContactNumber +
-                ", address='" + address + '\'' +
-                ", createdBy='" + createdBy + '\'' +
-                ", createdOn=" + createdOn +
-                ", updatedBy='" + updatedBy + '\'' +
-                ", updatedOn=" + updatedOn +
-                ", isActive=" + isActive +
-                ", agree='" + agree + '\'' +
-                '}';
+    public String getPassword() {
+        return password;
     }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public int getFailedAttempt() {
+        return failedAttempt;
+    }
+
+    public void setFailedAttempt(int failedAttempt) {
+        this.failedAttempt = failedAttempt;
+    }
+
+    public boolean isAccountLocked() {
+        return accountLocked;
+    }
+
+    public void setAccountLocked(boolean accountLocked) {
+        this.accountLocked = accountLocked;
+    }
+
+
+
+
+
+
+
 }
+

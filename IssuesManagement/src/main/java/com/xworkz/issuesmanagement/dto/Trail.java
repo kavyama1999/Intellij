@@ -1,177 +1,124 @@
-////package com.xworkz.springmvcdatabase.controller;
-////
-////
-////import com.xworkz.springmvcdatabase.dto.ContactDTO;
-////import com.xworkz.springmvcdatabase.dto.ContactSearchDTO;
-////import com.xworkz.springmvcdatabase.model.service.ContactService;
-////import org.springframework.beans.factory.annotation.Autowired;
-////import org.springframework.stereotype.Controller;
-////import org.springframework.ui.Model;
-////import org.springframework.validation.BindingResult;
-////import org.springframework.web.bind.annotation.GetMapping;
-////import org.springframework.web.bind.annotation.PostMapping;
-////import org.springframework.web.bind.annotation.RequestMapping;
-////import org.springframework.web.bind.annotation.RequestParam;
-////
-////import javax.validation.Valid;
-////import java.util.List;
-////
-////@Controller
-////@RequestMapping("/")
-////public class ContactController {
-////
-////    @Autowired
-////    private ContactService contactService;
-////
-////    public ContactController() {
-////        System.out.println("Constructor created for ContactController");
-////
-////    }
-////
-////    @PostMapping("/contact")
-////
-////    public String countryForm(@Valid ContactDTO contactDTO, BindingResult bindingResult, Model model) {
-////        System.out.println("Contact Data:" + contactDTO);
-////        if (bindingResult.hasErrors()) {
-////            System.out.println("ContactDTO had invalid data");
-////            bindingResult.getAllErrors().forEach(objectError -> System.out.println(objectError.getDefaultMessage()));
-////            model.addAttribute("errors", bindingResult.getAllErrors());
-////            model.addAttribute("contactDTO",contactDTO);//this retaining values form form page
-////
-////            return "ContactForm";
-////        } else {
-////
-////            boolean dataValid = this.contactService.contactSaveService(contactDTO);
-////            if (dataValid) {
-////                System.out.println("ContactService registration successful in ContactController:"+contactDTO);
-////            } else {
-////                System.out.println("ContactService registration not successful in ContactController: "+contactDTO);
-////            }
-////            model.addAttribute("msg", "Contact registration successful : "  +  contactDTO.getName());
-////
-////        }
-////
-////
-////        return "ContactResult";
-////
-////
-////    }
-////
-////    //search contact data
-////
-////
-////    @PostMapping("/contactSearch")
-////    public String searchedContactDetails(ContactSearchDTO contactSearchDTO, Model model) {
-////        System.out.println("Contact Data:" + contactSearchDTO);
-////        System.out.println("searchedContactDetails method in FormsController..");
-////
-////        List<ContactDTO> list = contactService.contactSearch(contactSearchDTO);
-////        if (!list.isEmpty()) {
-////            System.out.println("ContactSearch success in FormsController:" + contactSearchDTO);
-////        } else {
-////            System.out.println("ContactSearch is not success in FormsController:" + contactSearchDTO);
-////        }
-////        model.addAttribute("ContactName", contactSearchDTO.getName());
-////        model.addAttribute("listOfContactNames",list);
-////        return "ContactSearch";
-////    }
-////
-////
-////    //to edit...particular id. for contact form
-////
-////    @GetMapping("/contact-edit")
-////    public String onEdit(@RequestParam int id, Model model)   //("id_no") we can
-////    {
-////        System.out.println("Running on edit in Contact Controller");
-////        ContactDTO contactDTO= contactService.findByIdService(id);
-////        if(contactDTO!=null)
-////        {
-////            System.out.println("search in controller success:"+contactDTO);
-////            model.addAttribute("contactDTO",contactDTO);
-////        }
-////        else
-////        {
-////            System.out.println("search in controller not success");
-////        }
-////        return "ContactForm"; //return main controller page
-////
-////    }
-////
-////    //delete Contact data by using Id
-////    @GetMapping("/contact-delete")
-////    public String onDeletePMData(@RequestParam int id,Model model)
-////    {
-////        System.out.println("onDeletePMData method running in ContactController..");
-////        boolean deletedContactDto= this.contactService.deleteContactById(id);
-////        if(deletedContactDto)
-////        {
-////            System.out.println("Contact Data successfully deleted:"+deletedContactDto);
-////            model.addAttribute("message", "Contact with id " + id + " successfully deleted:");
-////            model.addAttribute("contactDTO",deletedContactDto);
-////
-//////       model.addAttribute("message", String.format("Contact with id %s successfully deleted", id));
-////
-////        }
-////        else
-////        {
-////            System.out.println("Contact data not successfully deleted:"+deletedContactDto);
-////            model.addAttribute("message","Contact with id not deleted" + id + "success");
-////        }
-////        return "ContactResult"; //Response page
-////    }
-////
-////
-////
-////
-////}
-////
+//@Service
+//public class SignUpServiceImpl implements SignUpService {
 //
+//    @Autowired
+//    private SignUpRepo signUpRepo;
 //
-//package com.xworkz.springmvcdatabase.dto;
+//    @Autowired
+//    private JavaMailSender mailSender;
 //
-//import org.hibernate.validator.constraints.NotEmpty;
+//    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//    private static final int PASSWORD_LENGTH = 10;
+//    private static final SecureRandom RANDOM = new SecureRandom();
 //
-//import javax.persistence.*;
-//import javax.validation.constraints.*;
+//    public SignUpServiceImpl() {
+//        System.out.println("No param Constructor in SignInServiceImpl");
+//    }
 //
+//    @Override
+//    public boolean saveAndValidate(SignUpDTO signUpDTO) {
+//        System.out.println("saveAndValidate method running in SignInServiceImpl");
+//        System.out.println("SetAudit value setting.............");
 //
-//@Entity
-//@Table(name = "contact_data")
-//public class ContactDTO {
+//        // Generate automatic password
+//        String generatedPassword = generateRandomPassword();
+//        signUpDTO.setPassword(generatedPassword);
 //
+//        // Set audit fields
+//        String createdBy = "Kavya"; // or get the current user
+//        LocalDateTime createdOn = LocalDateTime.now();
 //
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Integer id;  //to avoid dataType error we can change datatype as Non-primitive
+//        String updatedBy = "NA"; // or get the current user
+//        LocalDateTime updatedOn = null;
 //
-////for string we can use @NotEmpty
+//        boolean isActive = true;
 //
-////    create table contact_data(id int  primary key auto_increment,contact_name varchar(50),email varchar(50),mobile bigint,comments varchar(500));
+//        setAudit(signUpDTO, createdBy, createdOn, updatedBy, updatedOn, isActive);
 //
-//    @NotEmpty(message = "Name cannot be empty")
-//    @Size(min = 2, max = 30, message = "Name should contain only alphabetic letters")
-//    @Pattern(regexp = "^[a-zA-Z ]+$", message = "Name should contain only alphabetic letters")
-//    @Column(name = "contact_name")
-//    private String name;
+//        boolean data = this.signUpRepo.userDataSave(signUpDTO);
+//        if (data) {
+//            System.out.println("SignInRepo successful in SignInServiceImpl:" + signUpDTO);
+//            return data;
+//        } else {
+//            System.out.println("SignInRepo not successful in SignInServiceImpl :" + signUpDTO);
+//        }
+//        return true;
+//    }
 //
-//    @NotEmpty(message = "Email cannot be empty")
-//    @Pattern(regexp = "^[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$", message = "Enter valid email")
-//    private String email;
+//    @Override
+//    public void setAudit(SignUpDTO signUpDTO, String createdBy, LocalDateTime createdOn, String updatedBy, LocalDateTime updatedOn, boolean isActive) {
+//        System.out.println("setAudit method running in SignInServiceImpl..");
+//        signUpDTO.setCreatedBy(createdBy);
+//        signUpDTO.setCreatedOn(createdOn);
+//        signUpDTO.setUpdatedBy(updatedBy);
+//        signUpDTO.setUpdatedOn(updatedOn);
+//        signUpDTO.setActive(isActive);
+//    }
 //
+//    @Override
+//    public String generateRandomPassword() {
+//        StringBuilder sb = new StringBuilder(PASSWORD_LENGTH);
+//        for (int i = 0; i < PASSWORD_LENGTH; i++) {
+//            sb.append(CHARACTERS.charAt(RANDOM.nextInt(CHARACTERS.length())));
+//        }
+//        return sb.toString();
+//    }
 //
-//    @NotNull(message = "Please enter mobile number")
-//    @Min(1000000000)
-////@Min(1)
-//    @Max(9999999999L)
-//    private Long mobile;
+//    @Override
+//    public SignUpDTO findByEmailAndPassword(String email, String password) {
+//        SignUpDTO user = signUpRepo.findByEmailAndPassword(email, password);
+//        if (user != null && !user.isAccountLocked() && user.getPassword().equals(password)) {
+//            return user;
+//        }
+//        return null;
+//    }
 //
-//    @NotEmpty(message = "Please provide comments")
-//    @Size(min = 2, max = 300, message = "Comments should contain between 2 and 300 characters")
-//    @Pattern(regexp = "^[a-zA-Z ]+$", message = "Comments should contain only alphabetic letters and spaces")
-//    private String comments;
+//    @Override
+//    public void sendPasswordEmail(String toEmail, String subject, String body) {
+//        SimpleMailMessage message = new SimpleMailMessage();
+//        message.setTo(toEmail);
+//        message.setSubject(subject);
+//        message.setText(body);
+//        message.setFrom("kmsrcb@gmail.com");
 //
-//    //@NotEmpty(message = "Please confirm")
-//    @Transient //its not identify by the table
-//    private String confirm;
-
+//        mailSender.send(message);
+//    }
 //
+//    @Override
+//    public void incrementFailedAttempts(String email) {
+//        SignUpDTO user = signUpRepo.findByEmail(email);
+//        if (user != null) {
+//            int attempts = user.getFailedAttempt() + 1;
+//            updateFailedAttempts(attempts, email);
+//            if (attempts >= 3) {
+//                lockAccount(email);
+//            }
+//        }
+//    }
+//
+//    @Override
+//    public int getFailedAttempts(String email) {
+//        SignUpDTO user = signUpRepo.findByEmail(email);
+//        return user != null ? user.getFailedAttempt() : 0;
+//    }
+//
+//    @Override
+//    public void resetFailedAttempts(String email) {
+//        updateFailedAttempts(0, email);
+//    }
+//
+//    @Override
+//    public void lockAccount(String email) {
+//        updateAccountLockedStatus(true, email);
+//    }
+//
+//    @Override
+//    public void updateFailedAttempts(int failedAttempts, String email) {
+//        signUpRepo.updateFailedAttempts(failedAttempts, email);
+//    }
+//
+//    @Override
+//    public void updateAccountLockedStatus(boolean accountLocked, String email) {
+//        signUpRepo.updateAccountLockedStatus(accountLocked, email);
+//    }
+//}
