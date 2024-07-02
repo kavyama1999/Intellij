@@ -4,10 +4,8 @@ import com.xworkz.issuesmanagement.dto.SignUpDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
+import javax.persistence.*;
+import java.util.List;
 
 @Repository
 public class SignUpRepoImpl implements SignUpRepo {
@@ -31,6 +29,8 @@ public class SignUpRepoImpl implements SignUpRepo {
         try {
             entityTransaction.begin();
             entityManager.persist(signUpDTO);
+            //entityManager.merge(signUpDTO);
+
             entityTransaction.commit();
         } catch (Exception e) {
             e.printStackTrace();
@@ -70,5 +70,121 @@ public class SignUpRepoImpl implements SignUpRepo {
     }
 
 
+    //pruthvi
+    @Override
+    public SignUpDTO findByEmail(String email) {
+
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            Query query = entityManager.createQuery("select c from SignUpDTO c where email=:email");
+            query.setParameter("email", email);
+
+            List<SignUpDTO> resultList = query.getResultList();
+            if (resultList.isEmpty()) {
+                return null;
+            } else if (resultList.size() == 1) {
+                return resultList.get(0);
+            } else {
+                throw new NonUniqueResultException("Multiple results found for email: " + email);
+            }
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            entityManager.close();
+        }
+
+
+    }
+
+    @Override
+    public boolean update(SignUpDTO signUpDto) {
+
+
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction tx = entityManager.getTransaction();
+
+        try {
+            tx.begin();
+            entityManager.merge(signUpDto);
+            tx.commit();
+        } catch (PersistenceException persistenceException) {
+            persistenceException.printStackTrace();
+            tx.rollback();
+            return false;
+        } finally {
+            entityManager.close();
+        }
+        return true;
+
+
+    }
+
+
+    ///to avoid duplicate email
+
+//    @Override
+//    public SignUpDTO findByExistsEmail(String email) {
+//        EntityManager entityManager = entityManagerFactory.createEntityManager();
+//        System.out.println("Repo method");
+//        try {
+//            Query query = entityManager.createQuery("select c from SignUpDTO c where c.email=:email ");
+//            query.setParameter("email", email);
+//            SignUpDTO signUpDTO = (SignUpDTO) query.getSingleResult();
+//            return signUpDTO;
+//        } catch (PersistenceException persistenceException) {
+//            persistenceException.printStackTrace();
+//        } finally {
+//            entityManager.close();
+//        }
+//        return null;
+//    }
+
+
+
+
+
+
+
+    @Override
+    public SignUpDTO findByExistsEmail(String email) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        System.out.println("Repo method");
+        try {
+            Query query = entityManager.createQuery("select c from SignUpDTO c where c.email = :email");
+            query.setParameter("email", email);
+            SignUpDTO signUpDTO = (SignUpDTO) query.getSingleResult();
+            return signUpDTO;
+        } catch (NoResultException noResultException) {
+            // Handle the case where no entity is found for the query
+            System.out.println("No entity found for the given email: " + email);
+            return null; // or throw a custom exception, or handle it as per your application logic
+        } catch (PersistenceException persistenceException) {
+            persistenceException.printStackTrace();
+        } finally {
+            entityManager.close();
+        }
+        return null;
+    }
 
 }
+    ///to avoid duplicate email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

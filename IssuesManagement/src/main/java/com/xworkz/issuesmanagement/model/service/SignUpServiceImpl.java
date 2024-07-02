@@ -22,7 +22,7 @@ public class SignUpServiceImpl implements SignUpService {
     private JavaMailSender mailSender;
 
 
-    //pasword locking
+    // email lock when i enter password wrong  for 3 times pasword locking
     private Map<String, Integer> failedAttemptsMap = new HashMap<>();
     private Map<String, SignUpDTO> users = new HashMap<>(); // Simulated database
 
@@ -38,6 +38,12 @@ public class SignUpServiceImpl implements SignUpService {
     public boolean saveAndValidate(SignUpDTO signUpDTO) {
         System.out.println("saveAndValidate method running in SignInServiceImpl");
         System.out.println("SetAudit value setting.............");
+
+//        // Check if email already exists
+//        if (signUpRepo.checkEmailExists(signUpDTO.getEmail())) {
+//            System.out.println("Email already exists: " + signUpDTO.getEmail());
+//            return false;
+//        }
 
         // Generate automatic password
         String generatedPassword = generateRandomPassword();
@@ -87,15 +93,24 @@ public class SignUpServiceImpl implements SignUpService {
     }
 
 
+//    @Override
+//    public SignUpDTO findByEmailAndPassword(String email, String password) {
+//        SignUpDTO user = users.get(email);
+//        if (user != null && !user.isAccountLocked() && user.getPassword().equals(password)) {
+//            return user;
+//        }
+//        return signUpRepo.findByEmailAndPassword(email, password);
+//    }
+
+
     @Override
     public SignUpDTO findByEmailAndPassword(String email, String password) {
-        SignUpDTO user = users.get(email);
+        SignUpDTO user = signUpRepo.findByEmailAndPassword(email, password);
         if (user != null && !user.isAccountLocked() && user.getPassword().equals(password)) {
             return user;
         }
-        return signUpRepo.findByEmailAndPassword(email, password);
+        return null;
     }
-
 
     //to send password to email
 
@@ -111,42 +126,67 @@ public class SignUpServiceImpl implements SignUpService {
 
     }
 
+
+    //save the data into database of attempt_failed and account_locked
     @Override
     public void incrementFailedAttempts(String email) {
 
 
-        int attempts = failedAttemptsMap.getOrDefault(email, 0) + 1;
-        failedAttemptsMap.put(email, attempts);
-        if (attempts >= 3) {
-            lockAccount(email);
+        SignUpDTO user = signUpRepo.findByEmail(email);
+        if (user != null) {
+            int attempts = user.getFailedAttempt() + 1;
+            user.setFailedAttempt(attempts);
+            if (attempts >= 3) {
+                user.setAccountLocked(true);
+            }
+            signUpRepo.update(user);
         }
+
+
     }
+
 
     @Override
     public int getFailedAttempts(String email) {
-        return failedAttemptsMap.getOrDefault(email, 0);  // ajax with xml http request
+        SignUpDTO user = signUpRepo.findByEmail(email);
+        return (user != null) ? user.getFailedAttempt() : 0;
+
     }
 
 
     @Override
     public void resetFailedAttempts(String email) {
-
-        failedAttemptsMap.remove(email);
-
-
-    }
-
-    @Override
-    public void lockAccount(String email) {
-
-        SignUpDTO user = users.get(email);
+        SignUpDTO user = signUpRepo.findByEmail(email);
         if (user != null) {
-            user.setAccountLocked(true);
+            user.setFailedAttempt(0); //false
+            signUpRepo.update(user);
         }
 
     }
+
+
+    @Override
+    public void lockAccount(String email) {
+        SignUpDTO user = signUpRepo.findByEmail(email);
+        if (user != null) {
+            user.setAccountLocked(true);
+            signUpRepo.update(user);
+        }
+    }
+
+    @Override
+    public SignUpDTO findByExistsEmail(String email) {
+        SignUpDTO signUpDTO = signUpRepo.findByExistsEmail(email);
+        if (signUpDTO != null) {
+            return signUpDTO;
+        } else {
+            return null;
+        }
+    }
+
 }
 
 
+////parent ge child du bek
 
 

@@ -43,6 +43,25 @@ function emailValidation() {
                               }
                               validate();
                           }
+
+
+
+
+//            error: function () {
+//                error.innerHTML = "Error checking email availability.";
+//                error.style.color = "red";
+//                fieldsChecks["email"] = false;
+//                validate();
+//            }
+//        });
+//    } else {
+//        error.innerHTML = "Invalid email address.";
+//        error.style.color = "red";
+//        fieldsChecks["email"] = false;
+//        validate();
+//    }
+//}
+
 function passwordValidation(){
               let element = document.getElementById("password");
               let error = document.getElementById("passwordError");

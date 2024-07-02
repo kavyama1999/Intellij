@@ -23,8 +23,8 @@ public class SignUpController {
         System.out.println("No parameters Constructor created for SignUpController");
     }
 
-    @PostMapping("sign-up")
-    public String signInform(@Valid SignUpDTO signUpDTO, BindingResult bindingResult, Model model,@RequestParam("email")String email) {
+    @PostMapping("/sign-up")
+    public String signInform(@Valid SignUpDTO signUpDTO, BindingResult bindingResult, Model model, @RequestParam("email") String email) {
         System.out.println("SignUp Data:" + signUpDTO);
 
         // Generate automatic password before validation
@@ -43,25 +43,29 @@ public class SignUpController {
                 System.out.println("SignUpService registration successful in SignUpController :" + signUpDTO);
 
                 // Send email with generated password
-                String subject="welcome to our Issue management";
+                String subject = "welcome to our Issue management";
 
-                String body="Hi" + signUpDTO.getFirstName() + ",\n\n Your registration is successful.  Your password is  "  + signUpDTO.getPassword();
+                String body = "Hi" + signUpDTO.getFirstName() + ",\n\n Your registration is successful.  Your password is  " + signUpDTO.getPassword();
 
-                signUpService.sendPasswordEmail(email,subject,body);
+                signUpService.sendPasswordEmail(email, subject, body);
 
                 model.addAttribute("msg", "Signup successful. Please check your email for your password.");
                 return "LoginPage";
             } else {
                 System.out.println("SignUpService registration not successful in SignUpController : " + signUpDTO);
+               // model.addAttribute("failedMsg", "SignUp failed. Please try again. \"This email address is already in use.\"\n");
                 model.addAttribute("msg", "SignUp failed. Please try again.");
+
                 return "SignUpForm";
             }
         }
     }
 
+
     @PostMapping("login")
     public String login(@RequestParam String email, @RequestParam String password, Model model) {
         System.out.println("login method is running...");
+
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
 
@@ -78,8 +82,8 @@ public class SignUpController {
 //            return "LoginPage";
 
             signUpService.incrementFailedAttempts(email);
-                int failedAttempts = signUpService.getFailedAttempts(email);
-                System.out.println("Failed attempts for " + email + ": " + failedAttempts);
+            int failedAttempts = signUpService.getFailedAttempts(email);
+            System.out.println("Failed attempts for " + email + ": " + failedAttempts);
 //                if (failedAttempts >3) {
 //
 //                    //button disabled
@@ -91,17 +95,20 @@ public class SignUpController {
 //                }
             if (failedAttempts >= 3) {
                 signUpService.lockAccount(email); // Lock account after 3 failed attempts
+                System.out.println(email+" :Your account is locked due to too may failed attempts");
                 model.addAttribute("error", "Your account is locked due to too many failed attempts.");
                 model.addAttribute("accountLocked", true);
             } else {
+
                 model.addAttribute("error", "Invalid email id and password. Attempts: " + failedAttempts);
+                System.out.println("Invalid email Id and password");
                 model.addAttribute("accountLocked", false);
             }
 
 
-                return "LoginPage";
-            }
+            return "LoginPage";
         }
     }
+}
 
 

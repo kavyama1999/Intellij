@@ -9,7 +9,23 @@ public interface SignUpRepo {
 
 
     //to generate password
+
   public SignUpDTO findByEmailAndPassword(String email, String password);
 
 
+
+    //Pruthvi
+    SignUpDTO findByEmail(String email); // Add this method to find a user by email
+
+
+    boolean update(SignUpDTO signUpDto);
+
+
+    //duplicate
+
+    SignUpDTO findByExistsEmail(String email);
+
+
 }
+
+

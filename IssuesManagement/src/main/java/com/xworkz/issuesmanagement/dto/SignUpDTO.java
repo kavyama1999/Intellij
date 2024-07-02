@@ -13,7 +13,7 @@ public class SignUpDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private int id;
 
     @NotEmpty(message = "FirstName cannot be empty")
     @Size(min = 3, max = 30, message = "First Name should contain letters between >2 and <30")
@@ -39,7 +39,6 @@ public class SignUpDTO {
     private Long contactNumber;
 
     @NotNull(message = "Please Enter Alternative Contact Number")
-//    @Pattern(regexp = "^[0-9]{10}$", message = "Alternative Contact Number should be 10 digits")
     @Min(1111111111)
     @Max(9999999999L)
     @Column(name = "alternative_number")
@@ -66,40 +65,34 @@ public class SignUpDTO {
     private boolean isActive;
 
     @Transient
-    //@NotEmpty(message = "Please agree")
     private String agree;
 
-
-
-
-
-
-   // @NotEmpty(message = "Password cannot be empty")
-   // @Size(min = 8, max = 20, message = "Password should be between 8 and 20 characters")
     @Column(name = "password")
     private String password;
 
 
-    //for Account locking
-
+    //email locked update in database
     @Column(name = "failed_attempt")
-    private int failedAttempt;
+    private int failedAttempt=0;
 
+
+    public static final int MAX_LOGIN_ATTEMPTS=3;
     @Column(name = "account_locked")
-    private  boolean accountLocked;
+    private boolean accountLocked=false;
 
+    // Constructors, getters, and setters omitted for brevity
 
-
-    public SignUpDTO() {
-        System.out.println("No parameters in SignInDTO..");
+    public SignUpDTO()
+    {
+        System.out.println("SignUpDTO..");
     }
 
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -199,7 +192,6 @@ public class SignUpDTO {
         this.agree = agree;
     }
 
-
     public String getPassword() {
         return password;
     }
@@ -207,7 +199,6 @@ public class SignUpDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
     public int getFailedAttempt() {
         return failedAttempt;
@@ -226,10 +217,25 @@ public class SignUpDTO {
     }
 
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "SignUpDTO{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", contactNumber=" + contactNumber +
+                ", alternateContactNumber=" + alternateContactNumber +
+                ", address='" + address + '\'' +
+                ", createdBy='" + createdBy + '\'' +
+                ", createdOn=" + createdOn +
+                ", updatedBy='" + updatedBy + '\'' +
+                ", updatedOn=" + updatedOn +
+                ", isActive=" + isActive +
+                ", agree='" + agree + '\'' +
+                ", password='" + password + '\'' +
+                ", failedAttempt=" + failedAttempt +
+                ", accountLocked=" + accountLocked +
+                '}';
+    }
 }
-
