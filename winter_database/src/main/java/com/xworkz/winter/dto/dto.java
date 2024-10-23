@@ -1,125 +1,91 @@
-//package com.xworkz.winter.dto;
+//<%@ page  isELIgnored="false"%>
+//<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 //
-//import org.hibernate.validator.constraints.NotEmpty;
-//import org.springframework.format.annotation.DateTimeFormat;
+//<html>
+//<head>
+//<title>Index</title>
+//<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+//</head>
 //
-//import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.Pattern;
-//import javax.validation.constraints.Size;
+//<body>
+//<nav class="navbar navbar-light bg-info">
+//  <div class="container-fluid">
 //
-//public class dto package com.xworkz.formvalidation.dto;
-//
-//import org.hibernate.validator.constraints.NotEmpty;
-//import org.springframework.format.annotation.DateTimeFormat;
-//
-//import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.Pattern;
-//import javax.validation.constraints.Size;
-//import java.time.LocalDate;
-//
-//public class EventDTO1 {
-//
-//    @NotNull(message = "Name cannot be null ")
-//    @Size(min=2,max=30,message = "Name should contain only alphabetic characters")
-//    @Pattern(regexp = "^[a-zA-Z]+$", message = "Name should contain only alphabetic characters")
-//    private String name;
+//    <a href="index.jsp" <span  class="navbar-brand mb-0 h1">Home</span></a>
+//    <a href="collegeUniform.jsp" <span  class="navbar-brand mb-0 h1">CollegeUniformForm</span></a>
 //
 //
-//    @NotEmpty(message = "Email cannot be empty")
-////   @Email(message = "Enter valid email")
-//    @Pattern(regexp = "^[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$", message = "Enter valid email")
-//    private String email;
+//  </div>
+//</nav>
+//<div class="d-flex justify-content-center mt-3 mb-2 align-items-center vh-80">
+//<div class="card" style="width: 25rem;">
+//  <div class="card-body">
+//    <form action="search" method="post">
+//
+//              <div class="form-group">
+//                <label for="exampleInputEmail1"> Student Name</label>
+//                <input type="text"  class="form-control" id="name" name="name"  aria-describedby="emailHelp" placeholder="Enter Student Name">
+//                <span id="nameError"></span>
+//
+//              </div>
+//
+//         <div class="form-group">
+//                      <label for="collegeName">Select College</label>
+//                      <select class="form-control" name="collegeName" id="collegeName" onblur="collegeNameValidation()">
+//<option ${dto.collegeName==null ? 'selected' : ''}  selected value=" ">Select College</option>
+//                          <option value="JSS" ${dto.collegeName eq 'JSS' ? 'selected' : ''}>JSS</option>
+//                          <option value="SMI"  ${dto.collegeName eq 'SMI' ? 'selected' : ''}>SMI</option>
+//                          <option value="GIT"  ${dto.collegeName eq 'GIT' ? 'selected' : ''}>GIT</option>
+//                          <option value="BIT"  ${dto.collegeName eq 'BIT' ? 'selected' : ''}>BIT</option>
+//                          <option value="GMIT"  ${dto.collegeName eq 'GMIT' ? 'selected' : ''}>GMIT</option>
+//                      </select>
+//                      <span id="collegeNameError"></span>
+//                  </div>
+//
+//                  <div>
+//                       <button type="submit" id="submitBtn" class="btn btn-primary" >Submit</button>
+//                       </div>
+//                  </form>
+//
+//    </div>
+//  </div>
+//</div>
+//<div class="d-flex justify-content-center mt-3 mb-2 align-items-center vh-80">
+//<div class="card" style="width: 25rem;">
+//  <div class="card-body">
+//    <strong style="color:green;">Search result for , ${collegeName}</strong>
+//<table class="table">
+//  <thead>
+//    <tr>
+//      <th scope="col">ID</th>
+//      <th scope="col">College Name </th>
+//      <th scope="col">Student Name </th>
+//      <th scope="col">Roll No</th>
+//      <th scope="col">Gender</th>
+//    </tr>
+//  </thead>
+//  <tbody>
+//       <c:forEach items="${listOfCollegeUniform}" var="uniform">
+//              <tr>
+//<td>${uniform.id}</td>
+//<td>${uniform.collegeName}</td>
+//<td>${uniform.name}</td>
+//<td>${uniform.rollNo}</td>
+//<td>${uniform.gender}</td>
+//              </tr>
 //
 //
-//    @Pattern(regexp = "\\d{10}", message = "Mobile number must be 10 digits")
-//    private  String phone;
+//       </c:forEach>
 //
-//    private String event;
-//
-//    @NotNull(message = "Please enter date")
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
-//    private String date;
-//
-//    @NotEmpty(message = "please Comment")
-//    private String comment;
-//
-//    @NotEmpty(message = "please confirm")
-//    private   String   confirm;
-//
-//    public EventDTO()
-//    {
-//        System.out.println("No Parameters in EventDTO");
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
-//
-//    public String getPhone() {
-//        return phone;
-//    }
-//
-//    public void setPhone(String phone) {
-//        this.phone = phone;
-//    }
-//
-//    public String getEvent() {
-//        return event;
-//    }
-//
-//    public void setEvent(String event) {
-//        this.event = event;
-//    }
+//  </tbody>
+//</table>
 //
 //
-//    public String getDate() {
-//        return date;
-//    }
 //
-//    public void setDate(String date) {
-//        this.date = date;
-//    }
 //
-//    public String getComment() {
-//        return comment;
-//    }
 //
-//    public void setComment(String comment) {
-//        this.comment = comment;
-//    }
-//
-//    public String getConfirm() {
-//        return confirm;
-//    }
-//
-//    public void setConfirm(String confirm) {
-//        this.confirm = confirm;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "EventDTO{" +
-//                "name='" + name + '\'' +
-//                ", email='" + email + '\'' +
-//                ", phone='" + phone + '\'' +
-//                ", event='" + event + '\'' +
-//                ", date='" + date + '\'' +
-//                ", comment='" + comment + '\'' +
-//                ", confirm='" + confirm + '\'' +
-//                '}';
-//    }
-//}
-//{
-//}
+//    </div>
+//  </div>
+//</div>
+//</body>
+//</html>

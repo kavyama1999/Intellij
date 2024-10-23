@@ -58,17 +58,14 @@
 
 ${contactDTO}
 
-                    <!-- <form action="contact" method="post"  enctype="multipart/form-data">--!>
-
-                       <form action="contact" method="post"  >
-
-
-      <input type="hidden" name="id" value="${contactDTO.id !=null ? contactDTO.id:''}"/>
 
 
 
-<!----//within page we need response we can use this line..
-//if we need another page to response the create another result page--!>
+
+
+
+                       <form action="upload-file" method="post" enctype="multipart/form-data">
+
 
                 <div class="text-primary">${msg}</div>
 
@@ -78,41 +75,33 @@ ${contactDTO}
                     </c:forEach>
                 </span>
 
-<div class="row mb-3">
-                    <span id="nameError"></span><br>
-                    <label for="name" class="form-label"><b>Name:</b></label>
-                    <input type="text" class="form-control" id="name" onblur="nameValidation()" name="name" value="${contactDTO.name}">
-               </div>
 
 
-               
+
+
+
+
 
 <div class="mb-3">
-                        <span id="commentError"></span><br>
-                        <b>Comments</b>
-                        <label for="comments" class="form-floating"></label>
-                        <textarea class="form-control" placeholder="Leave a comment here" id="comments" style="height: 100px" name="comments" onblur="commentsValidation()">${contactDTO.comments} </textarea>
-                    </div>
-
-
-
-
-
-<!----<div class="mb-3">
                     <label for="file" class="form-label text-dark">Choose File</label>
                     <input type="file" class="form-control" name="file" id="file">
                 </div>
                 <div class="mb-3">
                     <input type="submit" class="form-control btn btn-primary" style="width:100px" value="Upload" name="upload" id="upload">
-                </div>---!>
+                </div>
+</form>
+<form action="download" method="get">
+
+<div class="mb-3">
+                    <label for="file" class="form-label text-dark">Enter File Name</label>
+                    <input type="text" class="form-control" name="fileName" id="file">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn btn-primary" style="width:100px" value="download"  id="upload">
+                </div>
 
 
 
-
-
-              <div>
-                  <input type="submit"  id="submit" value="Apply"  >
-              </div>
             </form>
          </div>
        </div>

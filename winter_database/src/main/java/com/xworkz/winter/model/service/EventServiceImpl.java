@@ -28,7 +28,7 @@ public class EventServiceImpl implements EventService{
 
         else
         {
-            System.out.println("EventRepo is successful in EventService"+eventDTO);
+            System.out.println("EventRepo is  not successful in EventService"+eventDTO);
         }
         return true;
 

@@ -17,7 +17,7 @@ import javax.validation.Valid;
 //@Component
 
 @RequestMapping()
-@EnableWebMvc
+//@EnableWebMvc
 
 public class EventFormController {
 
@@ -46,10 +46,10 @@ public class EventFormController {
             boolean validate=this.eventService.function(eventDTO);
             if(validate)
             {
-                System.out.println("EventService registration succefull in Controller:"+eventDTO);
+                System.out.println("EventService registration successful in Controller:"+eventDTO);
             }
             else {
-                System.out.println("EventService registration  not succefull in Controller:"+eventDTO);
+                System.out.println("EventService registration  not successful in Controller:"+eventDTO);
 
             }
 

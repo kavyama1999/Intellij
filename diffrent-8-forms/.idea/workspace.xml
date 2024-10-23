@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c871bc8-47a8-492b-ad53-e933e0cd25b6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../sathwik/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sathwik/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2hH7bzqxiy8zqLsz0ACKESd9pmX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.Tomcat: diffrent-8-forms.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Tomcat: diffrent-8-forms" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/diffrent-8-forms" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="extraClassPath" value="" />
+      <option name="port" value="8082" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/9.0.38" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-9.0.38-windows-x64/apache-tomcat-9.0.38" />
+          <option name="version" value="9.0.38.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="diffrent-8-forms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c871bc8-47a8-492b-ad53-e933e0cd25b6" name="Changes" comment="" />
+      <created>1717239224458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717239224458</updated>
+    </task>
+    <servers />
+  </component>
+</project>

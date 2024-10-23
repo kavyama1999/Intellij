@@ -31,7 +31,7 @@
     		<div class="card-body">
 
     				  <form action="job"   method="post">
-                                            <div class="text-primary"><b>${msg}<b></div>
+                                            <div class="text-primary"><b><h2>${msg}</h2><b></div>
 
                     </form>
 

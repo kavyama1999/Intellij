@@ -21,7 +21,9 @@ public class DBConfiguration {
         System.out.println("Constructor created for DBConfiguration..");
     }
 
-
+//@Value is used to assign default values to variables method arguments..
+    //mostly used to get value for specific property  keys form the properties file..
+///it is alos support spring expression values
     @Value("${jdbc.url}")
     private String url;
 
@@ -55,7 +57,7 @@ public class DBConfiguration {
         bean.setDataSource(dataSource);
         JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         bean.setJpaVendorAdapter(jpaVendorAdapter);
-        bean.setPackagesToScan("com.xworkz.databaseforms");
+        bean.setPackagesToScan("com.xworkz.springmvcdatabase");
 
         //for showing queries in console
         Properties properties=new Properties();

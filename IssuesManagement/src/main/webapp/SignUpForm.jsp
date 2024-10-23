@@ -6,6 +6,7 @@
     <meta charset="ISO-8859-1">
     <title>Student Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <script src="/IssuesManagement/js/signup.js"></script>
 </head>
 <body>
@@ -47,7 +48,7 @@
                 </div>
 
                 <div class="row mb-3">
-                    <span id="emailError"></span><br>
+                    <span id="emailError" style="color:red"></span><br>
                     <label for="email" class="form-label"><b>Email:</b></label>
                     <input type="email" class="form-control" id="email" onchange="emailValidation()" name="email" value="${signInDTO.email}">
                 </div>
@@ -97,30 +98,7 @@
 
 
 
-    <script>
 
-
-        function emailValidation() {
-            console.log("Validate email");
-            let email = document.getElementById("email").value;
-            console.log(email);
-            let error = document.getElementById("emailError");
-            const request = new XMLHttpRequest();
-            request.open("GET", "http://localhost:8082/IssuesManagement/validateEmail/" + email);
-
-           <!---- request.open("GET", "http://localhost:8082/IssuesManagement/validateEmail/" + email);---!>
-
-            request.send();
-            console.log(request);
-
-            request.onload = function() {
-                let ref = this.responseText;
-                console.log(ref);
-                error.innerHTML = ref;
-
-                 }
-        }
-    </script>
 
 
 </body>

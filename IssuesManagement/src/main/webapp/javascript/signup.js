@@ -84,6 +84,28 @@ function emailValidation() {
 
 
 
+//        function emailValidation() {
+//            console.log("Validate email");
+//            let email = document.getElementById("email").value;
+//            console.log(email);
+//            let error = document.getElementById("emailError");
+//            const request = new XMLHttpRequest();
+//            request.open("GET", "http://localhost:8082/IssuesManagement/validateEmail/" + email);
+//
+//           <!---- request.open("GET", "http://localhost:8082/IssuesManagement/validateEmail/" + email);---!>
+//
+//            request.send();
+//            console.log(request);
+//
+//            request.onload = function() {
+//                let ref = this.responseText;
+//                console.log(ref);
+//                error.innerHTML = ref;
+//
+//                 }
+//        }
+//
+
 
 
 // Contact Number

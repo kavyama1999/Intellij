@@ -9,6 +9,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 @Configuration
 public class DBConfiguration {
@@ -44,11 +45,18 @@ public class DBConfiguration {
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(DataSource dataSource) {
         System.out.println("Created LocalContainerEntityManagerFactoryBean");
+
+       //
         LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
         bean.setDataSource(dataSource);
         JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         bean.setJpaVendorAdapter(jpaVendorAdapter);
         bean.setPackagesToScan("com.xworkz.winter");
+
+        //for showing queries in console
+        Properties properties=new Properties();
+        properties.put("hibernate.show_sql","true");
+        bean.setJpaProperties(properties);
 
         return bean;
     }

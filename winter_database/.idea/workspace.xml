@@ -5,48 +5,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e945577-7ee5-4109-9883-0e1d8ae00db4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/beans/FormValidationBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/configuration/FormValidationPrimaryConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/JobApplicationForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/Result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sathwik/.idea/sathwik.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../smithan/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/DBConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterWebInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/EventFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/EventDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/dto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/EventRegistrationForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/EventResult.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/configuration/DBConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/configuration/FormConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/configuration/FormWebInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/controller/FormsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/controller/extra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/ContactDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/ContactSearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/CountryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/CountrySearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/PMDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/dto/PMSearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/model/repository/FormRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/model/repository/FormRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/model/service/FormService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/java/com/xworkz/databaseforms/model/service/FormServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/ContactForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/ContactResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/ContactSearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/CountryForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/CountryResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/CountrySearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/PMForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/PMResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-3-databaseforms/src/main/webapp/PMSearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/configuration/DBConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/configuration/SpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/configuration/SpringWebInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/controller/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/controller/CountryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/controller/PMController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/ContactDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/ContactSearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/CountryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/CountrySearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/PMDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/dto/PMSearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/ContactRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/ContactRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/CountryRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/CountryRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/PMRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/repository/PMRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/ContactService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/ContactServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/CountryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/CountryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/PMService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/java/com/xworkz/springmvcdatabase/model/service/PMServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/ContactForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/ContactResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/ContactSearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/CountryForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/CountryResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/CountrySearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/PMForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/PMResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/PMSearch.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-mvc-database/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/ContactFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/ContactDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/SearchDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/SearchRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/SearchRepoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/SearchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/SearchServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ContactForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ContactResult.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/javascript/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/javascript/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../different-form-validation8/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../different-form-validation8/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../different-form-validation8/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diffrent-8-forms/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/beans/FormValidationBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/beans/FormValidationBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/configuration/FormValidationPrimaryConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/configuration/FormValidationPrimaryConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/configuration/FormValidationWebInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/java/com/xworkz/formvalidation/dto/FormValidationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/JavaScript/jobapplication.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/JobApplicationForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/JobApplicationForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../form-validation-8/src/main/webapp/Result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sathwik/src/main/webapp/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../scholarshipretain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/configuration/ScholarshipWebInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/java/com/xworkz/scholarshipretain/dto/ScholarshipDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/Scholarship.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../scholarshipretain/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/DBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/DBConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/configuration/WinterConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/EventFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/controller/EventFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/EventDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/EventDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/dto/dto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/repo/EventImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xworkz/winter/model/service/EventServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/EventRegistrationForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/EventRegistrationForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/EventResult.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/EventResult.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

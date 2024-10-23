@@ -53,7 +53,7 @@ public class SignUpController {
                 return "LoginPage";
             } else {
                 System.out.println("SignUpService registration not successful in SignUpController : " + signUpDTO);
-               // model.addAttribute("failedMsg", "SignUp failed. Please try again. \"This email address is already in use.\"\n");
+                // model.addAttribute("failedMsg", "SignUp failed. Please try again. \"This email address is already in use.\"\n");
                 model.addAttribute("msg", "SignUp failed. Please try again.");
 
                 return "SignUpForm";
@@ -95,7 +95,7 @@ public class SignUpController {
 //                }
             if (failedAttempts >= 3) {
                 signUpService.lockAccount(email); // Lock account after 3 failed attempts
-                System.out.println(email+" :Your account is locked due to too may failed attempts");
+                System.out.println(email + " :Your account is locked due to too may failed attempts");
                 model.addAttribute("error", "Your account is locked due to too many failed attempts.");
                 model.addAttribute("accountLocked", true);
             } else {

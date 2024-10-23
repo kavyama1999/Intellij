@@ -1,3 +1,4 @@
+
 <%@ page isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -7,6 +8,7 @@
 <title>Student Form</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!---<script src="/winter_database/js/event.js"></script>--!>
 
  </head>
 <body>
@@ -24,7 +26,8 @@
     </div>
 </nav>
 
-<div class="container mt-5 mb-5 d-flex justify-content-center">
+<div class="container   mt-5   mb-5 d-flex justify-content-center">
+
     <div class="card p-4 ">
         <div class="card-body">
 
@@ -74,6 +77,11 @@
                         <option value="Conference" ${eventDTO.event == 'Conference' ? 'selected' : ''}>Conference</option>
                         <option value="Workshop" ${eventDTO.event == 'Workshop' ? 'selected' : ''}>Workshop</option>
                         <option value="Seminar" ${eventDTO.event == 'Seminar' ? 'selected' : ''}>Seminar</option>
+                        <option value="Birthday" ${eventDTO.event == 'Birthday' ? 'selected' : ''}>Birthday</option>
+                       <option value="Bachelor Party" ${eventDTO.event == 'Bachelor Party' ? 'selected' : ''}>Bachelor Party</option>
+                       <option value="Reception Party" ${eventDTO.event == 'Reception Party' ? 'selected' : ''}>Reception Party</option>
+
+
 
                     </select><br>
                 </div>
@@ -82,17 +90,12 @@
                 <div class="row mb-3">
                                     <span id="dateError"></span><br>
                                     <label for="date" class="form-label"><b>Date:</b></label>
-                                    <input type="date" class="form-control" id="date" onblur="dateValidation()" name="date" value="${eventDTO.date}">
+                                    <input type="date" class="form-control" id="date" onblur="dateValidation()" name="date"  min="2024-01-01" max="2025-12-31" value="${eventDTO.date}">
                                 </div>
 
 
 
-           <div class="mb-3">
-                        <span id="commentError"></span><br>
-                        <b>Comments</b>
-                        <label for="comment" class="form-floating"></label>
-                        <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px" name="comment" onblur="commentValidation()">${eventDTO.comment} </textarea>
-                    </div>
+
 
 <span  id="confirmError"></span>
                                       <label  for="cmf" class="list-group-item">
